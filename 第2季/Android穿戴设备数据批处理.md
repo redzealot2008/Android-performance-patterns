@@ -1,0 +1,13 @@
+# Android Wear Data Batching
+
+在Android Training里面有关于Wear上面如何利用Wearable API与Phone进行沟通协作的课程(详情请点击[这里](http://developer.android.com/training/wearables/data-layer/index.html))。因为Phone的CPU与电量都比Wear要强大，另外Phone还可以直接接入网络，而Wear要接入网络则相对更加困难，所以我们在开发Wear应用的时候需要尽量做到把复杂的操作交给Phone来执行。例如我们可以让Phone来获取天气信息，然后把数据返回Wear进行显示。更进一步，在之前的性能优化课程里面我们有学习过如何使用JobScheduler来延迟批量处理任务，假设Phone收到来自Wear的其中一个任务是每隔5分钟检查一次天气情况，那么Phone使用JobScheduler执行检查天气任务之后，先判断这次返回的结果和之前是否有差异，仅仅当天气发生变化的时候，才有必要把结果通知到Wear，或者仅仅把变化的某一项数据通知给Wear，这样可以更大程度上减少Wear的电量消耗。
+
+下面我们总结一下如何优化Wear的性能与电量：
+
+- 仅仅在真正需要刷新界面的时候才发出请求
+
+- 尽量把计算复杂操作的任务交给Phone来处理
+
+- Phone仅仅在数据发生变化的时候才通知到Wear
+
+- 把零碎的数据请求捆绑一起再进行操作
