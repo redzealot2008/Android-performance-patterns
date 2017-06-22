@@ -108,3 +108,33 @@ Eden Space，伊甸园
 
 ## optimal algo
 优化算法
+
+## Blend
+混色
+
+## opaque
+不透明
+
+## semi-transparent
+半透明
+
+## overlap
+重叠
+
+## one pass blending
+一次混合
+
+## daemon
+守护进程
+
+## concurrent
+并发
+
+## Finalizer
+终结器
+
+## PNG
+可移植网络图形格式（Portable Network Graphic Format）
+
+## Recap
+概述
