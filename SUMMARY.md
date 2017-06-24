@@ -55,3 +55,4 @@
 	- [Android性能优化之渲染篇](第2季/Android性能优化之渲染篇.md)
 	- [Android性能优化之内存篇](第2季/Android性能优化之内存篇.md)
 	- [Android 中的 Enum 到底占多少内存？该如何用？](第3季/Android 中的 Enum 到底占多少内存？该如何用？.md)
+	- [BitMask 使用参考](第3季/BitMask 使用参考.md)
